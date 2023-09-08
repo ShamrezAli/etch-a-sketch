@@ -1,0 +1,1 @@
+Creating an etch-a-sketch program to solidify my JavaScript and DOM manipulation skills.
