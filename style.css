@@ -1,0 +1,8 @@
+.gridContainer {
+    display: flex;
+}
+
+.theGrids {
+    flex: 1;
+    color: red;
+}
