@@ -1,6 +1,7 @@
 document.body.onload = addElement;
 
-let gridNum = 13;
+let gridInputNum = 5;
+let gridNum = Math.pow(gridInputNum, 2);
 
 function addElement() {
 
