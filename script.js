@@ -1,7 +1,10 @@
 document.body.onload = addElement;
 
-let gridInputNum = 5;
+let gridInputNum = 22;
 let gridNum = Math.pow(gridInputNum, 2);
+
+newWidth = gridInputNum*35;
+document.getElementById("gridContainer").style.width = newWidth + "px";
 
 function addElement() {
 
@@ -12,7 +15,7 @@ function addElement() {
         newDiv.setAttribute("class", "theGrids")
     
         // and give it some content
-        const newContent = document.createTextNode("Hi there and greetings!");
+        const newContent = document.createTextNode("");
 
         newDiv.style.border = "thick solid #0000FF";
     
