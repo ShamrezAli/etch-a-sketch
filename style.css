@@ -4,12 +4,12 @@
     border: 8px;
     border-color: rgb(223, 0, 0);
     border-style:dotted;
-    height: 77vh;
     width: 77vh;
+    height: 77vh;
 
 
 }
-.theGrids {
+#theGrids {
     color: red;
     display: flex;
     flex-grow: 1;
