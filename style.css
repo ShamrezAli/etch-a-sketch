@@ -1,16 +1,16 @@
 .gridContainer {
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 1;
-    height: 50%;
-}
+    border: 8px;
+    border-color: rgb(223, 0, 0);
+    border-style:dotted;
+    height: 77vh;
+    width: 77vh;
 
+
+}
 .theGrids {
     color: red;
-    width: 25px;
-    height: 25px;
     display: flex;
-    flex-shrink: 1;
-
-
+    flex-grow: 1;
 }
