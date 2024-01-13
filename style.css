@@ -9,7 +9,7 @@
 
 
 }
-#theGrids {
+.theGrids {
     color: red;
     display: flex;
     flex-grow: 1;
