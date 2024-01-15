@@ -6,11 +6,14 @@
     border-style:dotted;
     width: 77vh;
     height: 77vh;
-
-
 }
+
 .theGrids {
     color: red;
     display: flex;
     flex-grow: 1;
+}
+
+.theGrids:hover {
+    background-color:black;
 }
