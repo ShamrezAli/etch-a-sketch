@@ -28,6 +28,7 @@ button.addEventListener('click', function() {
     button.disabled = true;
     })
 
+//Resets the page to allow a new number to be applied   
 resetButton.addEventListener('click', function() {
     gridInputNum = 0;
     squaredInput = 0;
@@ -43,23 +44,6 @@ function widthSweep() {
         elements[i].style.width = newWidth + "%";
     }
 }
-
-//function showGrid() {
-  //  console.log("click worked")
-    //addElement();
-    //document.getElementById("theGrids").style.width = Number(newWidth) + "%";
-//}
-
-//document.getElementById("theGrids").style.width = newWidth + "%";; // turn the newwidth value into the number of pixels with 'px'
-
-//document.body.style.backgroundColor = "red"; // turn the newwidth value into the number of pixels with 'px'
-
-//squaredInput = Math.pow(gridInputNum, 2); // Square the value to get square
-//newWidth = (100/(gridInputNum + 1)); // Each square is 35px, so the total width should be the number of squares times 35px to get a proper square
-
-// the above is not applying my newWidth to the class.
-// If it did then I would have a perfect grid created
-
 
 //Function that adds grids to the grid container depending on number chosen
 function addElement() {
