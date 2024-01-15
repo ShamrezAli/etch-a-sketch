@@ -1,10 +1,16 @@
+//Loads the grid adding function immediately on page start
 document.body.onload = addElement;
 
+//Call variables that will be used
 let gridInputNum = 0; // How many squares comprise width/height
 let squaredInput = 0;
 let newWidth = 0;
-
+const button = document.querySelector('.applyButton');
+const resetButton = document.querySelector('.resetButton');
+let applyNewWidth = document.querySelector(".theGrids");
 const gridNums = document.querySelector("#numSelect");
+
+//Reacts to number box being changed, does math for the grids and width
 gridNums.addEventListener('change', () => {
     gridInputNum = gridNums.value;
     squaredInput = Math.pow(gridInputNum, 2);
@@ -14,11 +20,35 @@ gridNums.addEventListener('change', () => {
     console.log(newWidth);
 })
 
-function showGrid() {
-    console.log("click worked")
+//Calls grid forming function and changes grid width
+button.addEventListener('click', function() {
+    console.log("click worked");
     addElement();
-    document.getElementById("theGrids").style.width = Number(newWidth) + "%";
+    widthSweep();
+    button.disabled = true;
+    })
+
+resetButton.addEventListener('click', function() {
+    gridInputNum = 0;
+    squaredInput = 0;
+    newWidth = 0;
+    window.location.reload();
+    console.log('this button works too');
+})
+
+//Apply width adjustment for every element in the grid container
+function widthSweep() {
+    let elements = document.getElementsByClassName('theGrids');
+    for (let i=0; i < elements.length; i++) {
+        elements[i].style.width = newWidth + "%";
+    }
 }
+
+//function showGrid() {
+  //  console.log("click worked")
+    //addElement();
+    //document.getElementById("theGrids").style.width = Number(newWidth) + "%";
+//}
 
 //document.getElementById("theGrids").style.width = newWidth + "%";; // turn the newwidth value into the number of pixels with 'px'
 
@@ -30,6 +60,8 @@ function showGrid() {
 // the above is not applying my newWidth to the class.
 // If it did then I would have a perfect grid created
 
+
+//Function that adds grids to the grid container depending on number chosen
 function addElement() {
 
     for (let i = 0; i<squaredInput; i++) {
@@ -41,7 +73,7 @@ function addElement() {
         // and give it some content
         const newContent = document.createTextNode("");
 
-        newDiv.style.border = "solid #000000";
+        newDiv.style.border = "solid thin #000000";
     
         // add the text node to the newly created div
         newDiv.appendChild(newContent);
@@ -52,13 +84,3 @@ function addElement() {
         currentDiv.appendChild(newDiv);
     }
 }
-
-/* 
-What needs to be done:
-Add number chooser
-Make number chooser value change the grid input number value
-create a function: when button pressed, change the grid input number
-variable value (into the number in input box) and apply the 
-document theGrids style width equal to the newWidth calculated value 
-
-*/
