@@ -7,7 +7,8 @@ let squaredInput = 0;
 let newWidth = 0;
 const button = document.querySelector('.applyButton');
 const resetButton = document.querySelector('.resetButton');
-let applyNewWidth = document.querySelector(".theGrids");
+const theGridSquares = document.querySelector(".theGrids");
+const gridContainer = document.querySelector(".gridContainer");
 const gridNums = document.querySelector("#numSelect");
 
 //Reacts to number box being changed, does math for the grids and width
@@ -57,7 +58,7 @@ function addElement() {
         // and give it some content
         const newContent = document.createTextNode("");
 
-        newDiv.style.border = "solid thin #000000";
+        newDiv.style.border = "solid thin #E6E6FA";
     
         // add the text node to the newly created div
         newDiv.appendChild(newContent);
@@ -68,3 +69,20 @@ function addElement() {
         currentDiv.appendChild(newDiv);
     }
 }
+
+// Allow for the gradual colouration of grids as drawn in
+gridContainer.addEventListener('mouseover', event => {
+    let target = event.target
+    let rbgPercentValue = parseInt(target.dataset.percent);
+    if (isNaN(rbgPercentValue)) rbgPercentValue = 100;
+    if (rbgPercentValue >= 25) {
+        rbgPercentValue -= 25;
+        target.dataset.percent = rbgPercentValue;
+    }
+        let rgbColor = `rgb(${rbgPercentValue}%,${rbgPercentValue}%,${rbgPercentValue}%)`
+    
+        if (target !== gridContainer) {
+            target.style['background'] = rgbColor;
+        }
+    
+    })
