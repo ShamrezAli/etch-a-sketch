@@ -10,7 +10,8 @@ body {
 .threeButtons {
     display: flex;
     justify-content: center;
-    margin-left: 30vw;
+    margin-left: 9vw;
+    margin-right: -9vw;
     flex-direction: column;
 }
 
