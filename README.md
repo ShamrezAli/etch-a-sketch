@@ -1,4 +1,4 @@
-Live link to the project here: shamrezali.github.io/etch-a-sketch/
+Live link to the project here: https://shamrezali.github.io/etch-a-sketch/
 
 Creating an etch-a-sketch program to solidify my JavaScript and DOM manipulation skills.
 
