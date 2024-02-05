@@ -8,9 +8,11 @@
 </head>
 <body>
     <h1>Grid-Based Drawing Tool</h1>
-    <input type="number" id="numSelect" name="numSelect" min="2" max="100" placeholder="Squares" value="0" />
-    <button class="applyButton" type="button">Apply</button>
-    <button class="resetButton" type="button">Reset</button>
+    <threeButtons class="threeButtons">
+        <input type="number" id="numSelect" name="numSelect" min="2" max="100" placeholder="Squares" value="0" />
+        <button class="applyButton button-20" type="button">Apply</button>
+        <button class="resetButton button-20" type="button">Reset</button>
+    </threeButtons>
     <div class="gridContainer" id="gridContainer"></div>
 <script src="script.js"></script>    
 </body>
