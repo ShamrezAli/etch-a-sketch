@@ -7,13 +7,15 @@
     <title>Etch-a-Sketch Online</title>
 </head>
 <body>
-    <h1>Grid-Based Drawing Tool</h1>
-    <threeButtons class="threeButtons">
-        <input type="number" id="numSelect" name="numSelect" min="2" max="100" placeholder="Squares" value="0" />
-        <button class="applyButton button-20" type="button">Apply</button>
-        <button class="resetButton button-20" type="button">Reset</button>
-    </threeButtons>
-    <div class="gridContainer" id="gridContainer"></div>
+    <h1>Grid-Draw: <br> Online Etch-a-Sketch</h1>
+    <contentBox class="contentBox">
+        <threeButtons class="threeButtons">
+            <input type="number" id="numSelect" name="numSelect" min="2" max="100" placeholder="Squares" value="0" />
+            <button class="applyButton button-20" type="button">Apply</button>
+            <button class="resetButton button-20" type="button">Reset</button>
+        </threeButtons>
+        <div class="gridContainer" id="gridContainer"></div>
+    </contentBox>
 <script src="script.js"></script>    
 </body>
 </html>
